@@ -31,9 +31,27 @@ public class HangMan {
         }
     }
 
-    public void game() {
-        while()
+    public String wordToQuestionMarks() {
+        String wordInQuestionMarks = "";
+        for(int i = 1; i <= secretWord.length(); i++) {
+            wordInQuestionMarks += "?";
+        }
+        return wordInQuestionMarks;
     }
+    public void game(String letter) {
+        String questionMarks = wordInQuestionMarks();
+        System.out.println(questionMarks);
+        if(secretWord.contains(letter)) {
+            for(int index = 0; index <= secretWord.length(); index++) {
+                if(secretWord.substring(index, index + 1).equals("letter")) {
+                    questionMarks.replace(secretWord.substring(index, index+1), letter);
+                }
+            }
+        } else {
+            lives--;
+        }
+    }
+
 
 
 }
