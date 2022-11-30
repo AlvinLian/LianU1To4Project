@@ -4,6 +4,7 @@ public class HangMan {
     private String[] hardWords = {""};
     private String difficulty;
     private String secretWord;
+    private String secretWordInQuestionMarks;
     private int lives = 3;
 
     public HangMan() {
@@ -31,27 +32,41 @@ public class HangMan {
         }
     }
 
-    public String wordToQuestionMarks() {
-        String wordInQuestionMarks = "";
+    public void setSecretWordInQuestionMarks() {
         for(int i = 1; i <= secretWord.length(); i++) {
-            wordInQuestionMarks += "?";
+            secretWordInQuestionMarks += "?";
         }
-        return wordInQuestionMarks;
     }
     public void game(String letter) {
-        String questionMarks = wordInQuestionMarks();
-        System.out.println(questionMarks);
+        System.out.println(secretWordInQuestionMarks);
         if(secretWord.contains(letter)) {
             for(int index = 0; index <= secretWord.length(); index++) {
                 if(secretWord.substring(index, index + 1).equals("letter")) {
-                    questionMarks.replace(secretWord.substring(index, index+1), letter);
+                    secretWordInQuestionMarks.replace(secretWord.substring(index, index+1), letter);
                 }
             }
+            System.out.println("You are correct!");
         } else {
             lives--;
+            System.out.println("You are wrong! You have" + lives + "remaining.");
         }
     }
 
+    public int getLives() {
+        return lives;
+    }
+
+    public String getSecretWordInQuestionMarks() {
+        return secretWordInQuestionMarks;
+    }
+
+    public void determineResults() {
+        if(lives > 0) {
+            System.out.println("You won!");
+        } else {
+            System.out.println("You lost.");
+        }
+    }
 
 
 }
