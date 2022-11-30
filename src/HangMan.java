@@ -1,9 +1,9 @@
 public class HangMan {
-    private String[] easyWords = {"cat", "mouse", "school"};
-    private String[] mediumWords = {""};
-    private String[] hardWords = {""};
-    private String difficulty;
-    private String secretWord;
+    private String[] easyWords = {"cat", "mouse", "school", "flower", "person"};
+    private String[] mediumWords = {"suspense", "estimate", "prediction", "diversity", "alternative"};
+    private String[] hardWords = {"oblivious", "onomatopoeia", "omniscient", "enunciate", "acquaintance"};
+    private String difficulty = "";
+    private String secretWord = "";
     private String secretWordInQuestionMarks;
     private int lives = 3;
 
@@ -22,7 +22,7 @@ public class HangMan {
     }
 
     public void chooseWord() {
-        int randomNum = (int)(Math.random() + 6);
+        int randomNum = (int)(Math.random() * 6);
         if(difficulty.equals("e")) {
             secretWord = easyWords[randomNum];
         } else if(difficulty.equals("m")) {
@@ -48,7 +48,7 @@ public class HangMan {
             System.out.println("You are correct!");
         } else {
             lives--;
-            System.out.println("You are wrong! You have" + lives + "remaining.");
+            System.out.println("You are wrong! You have " + lives + " lives remaining.");
         }
     }
 
