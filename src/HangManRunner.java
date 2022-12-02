@@ -12,9 +12,11 @@ public class HangManRunner {
         game1.setSecretWordInQuestionMarks();
 
        while(game1.getLives() > 0 && (game1.getSecretWordInQuestionMarks().contains("?"))) {
-           System.out.print("Enter a letter:");
+           System.out.println(game1.getSecretWordInQuestionMarks());
+           System.out.print("Enter a letter: ");
            String guess = input.nextLine();
            game1.game(guess);
+           System.out.println();
        }
        game1.determineResults();
     }

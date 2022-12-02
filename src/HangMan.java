@@ -1,14 +1,14 @@
 public class HangMan {
-    private String[] easyWords = {"cat", "mouse", "school", "flower", "person"};
+    private String[] easyWords = {"cat", "school", "mouse", "water", "house"};
     private String[] mediumWords = {"suspense", "estimate", "prediction", "diversity", "alternative"};
     private String[] hardWords = {"oblivious", "onomatopoeia", "omniscient", "enunciate", "acquaintance"};
     private String difficulty = "";
     private String secretWord = "";
-    private String secretWordInQuestionMarks;
+    private String secretWordInQuestionMarks = "";
     private int lives = 3;
 
     public HangMan() {
-        int randomDifficulty = (int)(Math.random() + 3);
+        int randomDifficulty = (int)(Math.random() * 3);
         if(randomDifficulty == 0) {
             difficulty = "e";
         } else if (randomDifficulty == 1) {
@@ -22,7 +22,7 @@ public class HangMan {
     }
 
     public void chooseWord() {
-        int randomNum = (int)(Math.random() * 6);
+        int randomNum = (int)(Math.random() * 5);
         if(difficulty.equals("e")) {
             secretWord = easyWords[randomNum];
         } else if(difficulty.equals("m")) {
@@ -37,14 +37,20 @@ public class HangMan {
             secretWordInQuestionMarks += "?";
         }
     }
-    public void game(String letter) {
-        System.out.println(secretWordInQuestionMarks);
-        if(secretWord.contains(letter)) {
-            for(int index = 0; index <= secretWord.length(); index++) {
-                if(secretWord.substring(index, index + 1).equals("letter")) {
-                    secretWordInQuestionMarks.replace(secretWord.substring(index, index+1), letter);
+    public void game(String guess) {
+        String newStr = "";
+        if(secretWord.contains(guess)) {
+            for(int index = 0; index < secretWord.length(); index++) {
+                String letter = secretWord.substring(index, index + 1);
+                if(guess.equals(letter)) {
+                    newStr += letter;
+                } else if (!(secretWordInQuestionMarks.substring(index, index + 1).equals("?"))) {
+                    newStr += secretWord.substring(index, index + 1);
+                } else {
+                    newStr += "?";
                 }
             }
+            secretWordInQuestionMarks = newStr;
             System.out.println("You are correct!");
         } else {
             lives--;
@@ -61,6 +67,7 @@ public class HangMan {
     }
 
     public void determineResults() {
+        System.out.println("The word was " + secretWord);
         if(lives > 0) {
             System.out.println("You won!");
         } else {
@@ -70,3 +77,4 @@ public class HangMan {
 
 
 }
+
