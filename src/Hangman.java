@@ -23,7 +23,7 @@ public class Hangman {
     }
 
     public String toString() {
-        return "The random difficulty is set towin  " + difficulty;
+        return "The random difficulty is set to  " + difficulty;
     }
 
     public void chooseWord() {
