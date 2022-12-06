@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class HangManRunner {
+public class HangmanRunner {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -7,7 +7,7 @@ public class HangManRunner {
         String difficulty = input.nextLine();
 
         if(difficulty.equals("r")) {
-            HangMan game1 = new HangMan();
+            Hangman game1 = new Hangman();
             System.out.println(game1.toString());
             game1.chooseWord();
             game1.setSecretWordInQuestionMarks();
@@ -22,19 +22,19 @@ public class HangManRunner {
             }
             game1.determineResults();
         } else {
-            HangMan game1 = new HangMan(difficulty);
-            game1.chooseWord();
-            game1.setSecretWordInQuestionMarks();
+            Hangman game2 = new Hangman(difficulty);
+            game2.chooseWord();
+            game2.setSecretWordInQuestionMarks();
 
-            while(game1.isGameRunning()) {
-                System.out.println(game1.getSecretWordInQuestionMarks());
+            while(game2.isGameRunning()) {
+                System.out.println(game2.getSecretWordInQuestionMarks());
                 System.out.print("Enter a letter: ");
                 String guess = input.nextLine();
-                System.out.println(game1.addLetterUsed(guess));
-                game1.game(guess);
+                System.out.println(game2.addLetterUsed(guess));
+                game2.game(guess);
                 System.out.println();
             }
-            game1.determineResults();
+            game2.determineResults();
         }
 
     }

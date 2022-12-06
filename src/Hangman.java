@@ -1,4 +1,4 @@
-public class HangMan {
+public class Hangman {
     private String[] easyWords = {"cat", "school", "mouse", "water", "house"};
     private String[] mediumWords = {"suspense", "estimate", "prediction", "diversity", "alternative"};
     private String[] hardWords = {"oblivious", "onomatopoeia", "omniscient", "enunciate", "acquaintance"};
@@ -8,7 +8,7 @@ public class HangMan {
     private String lettersUsed = "Letters used: ";
     private int lives = 5;
 
-    public HangMan() {
+    public Hangman() {
         int randomDifficulty = (int)(Math.random() * 3);
         if(randomDifficulty == 0) {
             difficulty = "e";
@@ -18,12 +18,12 @@ public class HangMan {
             difficulty = "h";
         }
     }
-    public HangMan(String difficulty) {
+    public Hangman(String difficulty) {
         this.difficulty = difficulty;
     }
 
     public String toString() {
-        return "The random difficulty is set to " + difficulty;
+        return "The random difficulty is set towin  " + difficulty;
     }
 
     public void chooseWord() {

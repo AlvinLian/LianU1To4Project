@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac4b4bab-e055-4946-8da3-55b64bcb25be" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HangMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HangManRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangManRunner.java" afterDir="false" />
+    <list default="true" id="ac4b4bab-e055-4946-8da3-55b64bcb25be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/HangMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hangman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HangManRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HangmanRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +40,8 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="HangManRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HangManRunner" />
+    <configuration name="HangmanRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HangmanRunner" />
       <module name="LianU1To4Project" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -50,7 +49,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HangManRunner" />
+        <item itemvalue="Application.HangmanRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -70,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669817038884</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1670177302205</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670177302205</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,7 +98,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HangManRunner.java</url>
+          <url>file://$PROJECT_DIR$/src/HangmanRunner.java</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
