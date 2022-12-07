@@ -1,5 +1,6 @@
 /**
  *  This is a class that represents the Hangman game.
+ *  
  */
 public class Hangman {
     /** This is the list of easy words */
